@@ -1,0 +1,113 @@
+
+html, body{
+  min-height:100%;
+  width:100%;
+  background-color: #FBF8F1;
+}
+.truncate-3{
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    overflow: hidden;
+    hyphens: auto;
+    width:100%;
+}
+body>main{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+}
+body>main>nav, body>main>footer{
+    flex-shrink: 1;
+}
+div#main-wrapper{
+    flex-grow: 1;
+    overflow: auto;
+    position:relative;
+    min-height: 70vh;
+}
+main>nav{
+  background-color: 	#0072b2 !important;
+}
+
+main>footer {
+  background-color: #f3efe6;
+}
+
+
+/**
+* Post Designs
+*/
+
+.user-img-container{
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50%;
+}
+.post-img-single-container:not(:empty){
+  width: 100%;
+  min-height: 35vh;
+  background-color: var(--bs-gray-200);
+  padding: 0 5px;
+}
+
+/**
+* Skeleton Loader Post Designs
+*/
+.skl-load{
+  position: relative;
+  overflow: hidden !important;
+}
+.skl-load .user-img-container,
+.skl-load .text-col{
+  background: var(--bs-gray-300);
+  background-color: var(--bs-gray-300);
+}
+
+.skl-load .text-col{
+  width: 100%;
+  min-height: 20px;
+  margin:10px 0 ;
+}
+.skl-load .post-img-single-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35vh;
+  background-color: var(--bs-gray-200);
+  padding: 0 5px;
+}
+.skl-load .post-img-single-container:before{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  background-image: url(./../img/img-icon.png);
+  background-size: 150px 150px;
+  content: "";
+  opacity: .3;
+}
+.skl-load:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, rgb(254 254 254 / 8%) 24%, rgb(255 255 255 / 32%) 50%, rgb(254 254 254 / 13%) 77%);
+  transform: translateX(-100%);
+  z-index: 2;
+  animation: shine 1.5s infinite 3s;
+}
+
+
+@keyframes shine {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}

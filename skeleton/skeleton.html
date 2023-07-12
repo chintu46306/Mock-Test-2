@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./skeleton.css" />
+    <title>skeleton loader</title>
+  </head>
+  <body>
+    <section class="sectionOne">
+      <h2 class="question">
+        3. Fetch data from the JSON placeholder API and display it in the
+        browser. Also, implement the skeleton loader which will be displayed
+        when the data is getting fetched. (No library should be used for
+        implementing the skeleton loader)
+      </h2>
+
+      <div class="main">
+        <div class="img loading"></div>
+        <div class="details">
+          <h4 class="heading loading"></h4>
+          <p class="price loading"></p>
+          <p class="description loading"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      const img = document.querySelector(".img");
+      const heading = document.querySelector(".heading");
+      const price = document.querySelector(".price");
+      const description = document.querySelector(".description");
+      const fetchData = async () => {
+        const response = await fetch("https://fakestoreapi.com/products/1");
+        if (response.ok) {
+          const data = await response.json();
+          img.innerHTML = `<img src="${data.image}" alt="product image" width="100%" height="250px"/>`;
+          img.classList.remove("loading")
+          heading.innerHTML = data.title;
+          heading.classList.remove("loading")
+          price.innerHTML = data.price;
+          price.classList.remove("loading")
+          description.innerHTML = data.description;
+          description.classList.remove("loading")
+        } else {
+          throw new error();
+        }
+      };
+      setTimeout(() => {
+        fetchData();
+      }, 2000);
+    </script>
+  </body>
+</html>

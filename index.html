@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/72c0a73ce9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mock test 2</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">
+          <div class="logo">
+            <i class="fa-regular fa-handshake"></i>
+            <p class="logo-text">FREEBANKING</p>
+          </div>
+        </a>
+        <ul class="flex nav">
+          <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+          <li class="nav_item"><a href="#" class="nav_link">Feature</a></li>
+          <li class="nav_item"><a href="#" class="nav_link">Tesmonials</a></li>
+          <li class="nav_item"><a href="#" class="nav_link">login</a></li>
+          <li class="nav_item"><a href="#" class="nav_link">register</a></li>
+        </ul>
+        <div class="hamburger">
+          <p class="bar"></p>
+          <p class="bar"></p>
+          <p class="bar"></p>
+        </div>
+      </nav>
+    </header>
+
+    <section class="sectionOne">
+      <h2 class="question">
+        1. DOM Manipulation: Create a page with a square box of size 300x300 on
+        the page which will be red initially, upon clicking the red box it
+        should change the color to yellow and the size should be doubled
+      </h2>
+      <div class="size">
+        <p class="hover">hover me</p>
+      </div>
+    </section>
+    <section class="sectionOne">
+      <h2 class="question">
+        2. Create a app where you have an input box and whenever a user types
+        something in the input box and hits submit it should be added on the
+        webpage below the input box
+      </h2>
+      <div class="todo-app">
+        <h2>To-Do List</h2>
+        <div class="row">
+          <input
+            type="text"
+            placeholder="add task"
+            id="inputBox"
+            class="inputField"
+          />
+
+          <button class="add" onclick="addTask()">Submit</button>
+        </div>
+        <p class="required">please provide input value</p>
+        <ul id="list-container">
+          <!-- <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li> -->
+        </ul>
+      </div>
+    </section>
+    <section class="sectionOne">
+      <h2 class="question">
+        3. Fetch data from the JSON placeholder API and display it in the
+        browser. Also, implement the skeleton loader which will be displayed
+        when the data is getting fetched. (No library should be used for
+        implementing the skeleton loader)
+      </h2>
+      <button class="add">
+        <a href="./skeleton/skeleton.html" target="_blank" class="alink"
+          >solution</a
+        >
+      </button>
+    </section>
+    <section class="sectionOne">
+      <h2 class="question">
+        5. Create a form with proper form validation using JavaScript (name,
+        email, phone number, password, age, gender, date, color picker)
+      </h2>
+      <button class="add">
+        <a href="./validate/validate.html" target="_blank" class="alink"
+          >solution</a
+        >
+      </button>
+    </section>
+    <section class="sectionOne">
+      <h2 class="question">
+        6. Create a custom modal window using HTML, CSS, and JavaScript. On
+        clicking a button the modal window should appear and the user can click
+        outside the modal window to close the modal along with a close button
+        which is inside the modal. Also when the modal is open the window should
+        not be scrollable.
+      </h2>
+      <h2 class="modal-title">Show modal</h2>
+      <button class="show-modal add">show modal</button>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1 class="modalWindow">I'm a modal window</h1>
+        <p class="modalText">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde rerum
+          iusto in cupiditate perferendis possimus magnam quam ipsam voluptas,
+          reprehenderit fuga minus esse explicabo voluptatem quae animi.
+          Corporis, omnis.
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
+    </section>
+  </body>
+  <script src="./script.js"></script>
+</html>
